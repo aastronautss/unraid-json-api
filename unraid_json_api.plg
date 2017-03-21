@@ -1,0 +1,26 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+  <!ENTITY name 'unraid-json-api'>
+  <!ENTITY author 'aastronauts'>
+  <!ENTITY version 2017.03.19>
+  <!ENTITY pluginURL 'https://github.com/aastronauts/unraid-json-api/raw/master/unraid_json_api.plg'>
+]>
+
+<PLUGIN name='&name;'
+        author='&author;'
+        version='&version;'
+        pluginURL='&pluginURL;'>
+  <!--
+    Page File
+  -->
+  <!-- <FILE Name="/usr/local/emhttp/plugins/&name;/unraid_json_api.page">
+    <INLINE>
+<![CDATA[
+Author="&author;"
+Version=""
+]]>
+    </INLINE>
+  </FILE> -->
+
+</PLUGIN>
