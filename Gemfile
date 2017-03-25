@@ -11,6 +11,7 @@ gem 'puma', '~> 3.0'
 
 # Back-end Libraries
 gem 'jbuilder', '~> 2.5'
+gem 'inifile'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -19,6 +20,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'pry'
   gem 'byebug', platform: :mri
+
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
