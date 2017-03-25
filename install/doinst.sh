@@ -51,6 +51,7 @@ if [[ `uname -m` == "x86_64" ]]; then
   fetchpkg -p /slackware64/d/gcc-java-5.3.0-x86_64-3.txz -s 14.2 -i
   fetchpkg -p /slackware64/d/swig-3.0.7-x86_64-1.txz -s 14.2 -i
   fetchpkg -p /slackware64/l/gc-7.4.2-x86_64-3.txz -s 14.2 -i
+  fetchpkg -p /slackware64/l/readline-6.3-x86_64-2.txz -s 14.2 -i
 else
   # fetchpkg -p /slackware/d/kernel-headers-4.4.14-x86-1.txz -s 14.2 -i
   # fetchpkg -p /slackware/d/binutils-2.26-x86_64-3.txz -s 14.2 -i
