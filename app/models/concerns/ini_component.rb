@@ -9,24 +9,22 @@ module IniComponent
     def ini_data(file)
       parse_ini(file).to_h
     end
-  end
-
-  module InstanceMethods
-    def initialize(properties = self.class.ini_data(ini_filename))
-      properties = drill_down_from_global(properties)
-      properties.each do |k, v|
-        instance_variable_set("@#{k}", v)
-      end
-    end
-
-    private
-
-    def drill_down_from_global(properties)
-      properties['global'] || properties
-    end
 
     def ini_filename
       'var'
     end
+  end
+
+  def initialize(properties = self.class.ini_data(self.class.ini_filename))
+    properties = drill_down_from_global(properties)
+    properties.each do |k, v|
+      instance_variable_set("@#{k}", v)
+    end
+  end
+
+  private
+
+  def drill_down_from_global(properties)
+    properties['global'] || properties
   end
 end

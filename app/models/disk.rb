@@ -13,7 +13,7 @@ class Disk
 
   private
 
-  def ini_filename
+  def self.ini_filename
     'disks'
   end
 end
