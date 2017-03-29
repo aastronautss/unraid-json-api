@@ -18,7 +18,7 @@ module IniComponent
   def initialize(properties = self.class.ini_data(self.class.ini_filename))
     properties = drill_down_from_global(properties)
     properties.each do |k, v|
-      instance_variable_set("@#{k}", v)
+      instance_variable_set("@#{normalize_var_name k}", v)
     end
   end
 
@@ -26,5 +26,13 @@ module IniComponent
 
   def drill_down_from_global(properties)
     properties['global'] || properties
+  end
+
+  def normalize_var_name(var_name)
+    var_name.gsub(/::/, '/').
+        gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+        gsub(/([a-z\d])([A-Z])/,'\1_\2').
+        tr("-", "_").
+        downcase
   end
 end
